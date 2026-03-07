@@ -4,6 +4,28 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  role      Role     @default(USER)
+  createdAt DateTime @default(now())
+  tasks     Task[]
+}
+
+model Task {
+  id          String     @id @default(uuid())
+  title       String
+  description String?
+  status      TaskStatus @default(TODO)
+  userId      String
+  createdAt   DateTime   @default(now())
+  user        User       @relation(fields: [userId], references: [id])
+
+  @@index([userId])
 }
 
 enum Role {
@@ -15,26 +37,4 @@ enum TaskStatus {
   TODO
   IN_PROGRESS
   DONE
-}
-
-model User {
-  id        String   @id @default(uuid())
-  email     String   @unique
-  password  String
-  role      Role     @default(USER)
-  tasks     Task[]
-  createdAt DateTime @default(now())
-}
-model Task {
-  id          String     @id @default(uuid())
-  title       String
-  description String?
-  status      TaskStatus @default(TODO)
-
-  userId String
-  user   User @relation(fields: [userId], references: [id])
-
-  createdAt DateTime @default(now())
-
-  @@index([userId])
 }
