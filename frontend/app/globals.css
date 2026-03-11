@@ -1,0 +1,183 @@
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:linear-gradient(135deg,#ffd6e7,#ffb3d9);
+}
+
+/* center pages */
+
+.center-page{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* card container */
+
+.card{
+  background:#ff9ecb;
+  padding:40px;
+  width:340px;
+  border-radius:10px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.2);
+  text-align:center;
+  transition:transform 0.25s ease;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+/* titles */
+
+.card h1{
+  margin-bottom:20px;
+  color:white;
+}
+
+/* inputs */
+
+.card input{
+  width:100%;
+  padding:10px;
+  margin:12px 0;
+  border:none;
+  border-radius:6px;
+  background:#ff3fa6;
+  color:white;
+}
+
+.card input::placeholder{
+  color:#ffe3f3;
+}
+
+.card input:focus{
+  outline:none;
+  box-shadow:0 0 8px rgba(255,0,150,0.7);
+}
+
+/* buttons */
+
+.card button{
+  width:100%;
+  padding:10px;
+  margin-top:15px;
+  border:none;
+  border-radius:6px;
+  background:#ff6fb5;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:all 0.2s ease;
+}
+
+.card button:hover{
+  background:#ff4fa6;
+  transform:scale(1.05);
+}
+
+.card button:active{
+  transform:scale(0.97);
+}
+
+/* dashboard task list */
+
+.task-card{
+  background:white;
+  padding:12px;
+  margin-top:10px;
+  border-radius:8px;
+  text-align:left;
+}
+
+.task-card button{
+  width:auto;
+  margin-top:5px;
+  background:#ff4fa6;
+}
+.auth-link{
+  margin-top:15px;
+  color:white;
+  font-size:14px;
+}
+
+.auth-link a{
+  color:#ff006e;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.auth-link a:hover{
+  text-decoration:underline;
+}
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#ffd6e7; /* light pink */
+}
+
+/* center page */
+
+.login-page{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* square login box */
+
+.login-box{
+  background:#ff9ecb; /* pink */
+  padding:40px;
+  width:320px;
+  border-radius:8px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  text-align:center;
+}
+
+/* inputs */
+
+.login-box input{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border:none;
+  border-radius:5px;
+  background:#ff3fa6; /* magenta */
+  color:white;
+}
+
+/* placeholder text */
+
+.login-box input::placeholder{
+  color:#ffe3f3;
+}
+
+/* login button */
+
+.login-box button{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border:none;
+  border-radius:5px;
+  background:#ff6fb5; /* pinkish */
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.login-box button:hover{
+  background:#ff4fa6;
+}
+
+.logout-btn{
+  background:#ff006e;
+  margin-bottom:15px;
+}
+
+.logout-btn:hover{
+  background:#d6005c;
+}
